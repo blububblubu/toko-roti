@@ -3,17 +3,14 @@ export default function VideoSection() {
     {
       src: "/video/v1.mp4",
       fallbackSrc: "/video/proses-1.mp4",
-      title: "Pengadukan & Proofing",
     },
     {
       src: "/video/v2.mp4",
       fallbackSrc: "/video/proses-2.mp4",
-      title: "Panggang Fresh from Oven",
     },
     {
       src: "/video/v3.mp4",
       fallbackSrc: "/video/proses-3.mp4",
-      title: "Sentuhan Akhir & Kualitas",
     },
   ];
 
@@ -31,24 +28,19 @@ export default function VideoSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {videos.map((vid, index) => (
-            <div key={index} className="space-y-2">
-              <div className="overflow-hidden rounded-xl bg-black/5 shadow-sm">
-                <video
-                  src={vid.src}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto object-contain rounded-xl"
-                >
-                  <source src={vid.src} type="video/mp4" />
-                  <source src={vid.fallbackSrc} type="video/mp4" />
-                  Browser Anda tidak mendukung tag video.
-                </video>
-              </div>
-              <p className="text-xs sm:text-sm font-heading font-semibold text-[#231F20]/80">
-                {vid.title}
-              </p>
+            <div key={index} className="overflow-hidden rounded-xl bg-black/5 shadow-sm">
+              <video
+                src={vid.src}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto object-contain rounded-xl"
+              >
+                <source src={vid.src} type="video/mp4" />
+                <source src={vid.fallbackSrc} type="video/mp4" />
+                Browser Anda tidak mendukung tag video.
+              </video>
             </div>
           ))}
         </div>
@@ -56,4 +48,3 @@ export default function VideoSection() {
     </section>
   );
 }
-
