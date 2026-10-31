@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
@@ -21,14 +22,20 @@ export default function Header() {
     <header className="sticky top-0 z-40 bg-[#FAF6EF]/95 backdrop-blur-sm transition-all py-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
-          {/* Brand Logo - HAPPIES Style */}
+          {/* Brand Logo */}
           <Link
             href="/"
-            className="flex items-center gap-1 group transition-transform active:scale-95"
+            className="flex items-center gap-2 group transition-transform active:scale-95"
+            aria-label="Arini Bakery"
           >
-            <span className="text-2xl sm:text-3xl font-heading font-bold tracking-tight text-[#231F20] uppercase">
-              ARINI&apos;S<span className="text-xs align-super ml-0.5">®</span>
-            </span>
+            <Image
+              src="/logo-arini.jpg"
+              alt="Logo Arini Bakery"
+              width={100}
+              height={50}
+              className="h-10 sm:h-12 w-auto object-contain rounded-md"
+              priority
+            />
           </Link>
 
           {/* Center Navigation */}

@@ -1,9 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   MapPin,
   Phone,
   Clock,
   Instagram,
+  Facebook,
+  ShoppingBag,
   Heart,
   Sparkles,
 } from "lucide-react";
@@ -15,11 +18,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-white/10">
           {/* Brand Info */}
           <div className="space-y-4">
-            <span className="text-2xl sm:text-3xl font-heading font-bold text-white tracking-tight uppercase block">
-              ARINI&apos;S<span className="text-xs align-super ml-0.5 text-[#F9D02F]">®</span>
-            </span>
+            <Link href="/" className="inline-block" aria-label="Arini Bakery">
+              <Image
+                src="/logo-arini.jpg"
+                alt="Logo Arini Bakery"
+                width={52}
+                height={52}
+                className="h-12 w-12 object-contain rounded-xl bg-white p-1 shadow-xs"
+              />
+            </Link>
+            <p className="text-sm font-heading font-bold text-[#F9D02F]">
+              Enak e gak mari-mari!
+            </p>
             <p className="text-xs sm:text-sm text-[#FAF6EF]/75 font-body leading-relaxed max-w-xs">
-              Real snacks. Real bakes. Dibuat dengan resep istimewa, bahan alami, dan dipanggang segar setiap pagi untuk keluarga Anda.
+              Toko roti lokal legendaris Jember. Roti, kue, dan brownies lezat dipanggang segar setiap hari untuk keluarga Anda.
             </p>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-xs font-semibold text-[#F9D02F]">
               <Sparkles className="w-3.5 h-3.5 fill-[#F9D02F]" />
@@ -27,90 +39,120 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Lokasi Toko & Google Maps */}
           <div className="space-y-4">
             <h4 className="font-heading font-bold text-sm text-white tracking-wider uppercase">
-              Quick Links
+              Lokasi Outlet
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-[#FAF6EF]/75 font-body">
-              <li>
-                <Link href="/#about" className="hover:text-[#F9D02F] transition-colors flex items-center gap-1.5">
-                  <span>›</span> About
-                </Link>
-              </li>
-              <li>
-                <Link href="/#products" className="hover:text-[#F9D02F] transition-colors flex items-center gap-1.5">
-                  <span>›</span> Our Favorites
-                </Link>
-              </li>
-              <li>
-                <Link href="/#ingredients" className="hover:text-[#F9D02F] transition-colors flex items-center gap-1.5">
-                  <span>›</span> Real Ingredients
-                </Link>
-              </li>
-              <li>
-                <Link href="/testimoni" className="hover:text-[#F9D02F] transition-colors flex items-center gap-1.5">
-                  <span>›</span> Customer Reviews
-                </Link>
-              </li>
-            </ul>
+            <div className="space-y-2.5 text-xs text-[#FAF6EF]/80 font-body">
+              <div className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-[#F9D02F] shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-white">Outlet Utama Tanggul:</p>
+                  <p>Jl. Urip Sumoharjo, Tanggul, Jember (Timur Polsek Tanggul)</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-[#F9D02F] shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-white">Cabang Bangsalsari:</p>
+                  <p>Cabang Bangsalsari, Jember</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Google Maps embed kecil */}
+            <div className="w-full h-28 rounded-xl overflow-hidden border border-white/10 mt-3 shadow-xs">
+              <iframe
+                title="Peta Lokasi Arini Bakery Tanggul Jember"
+                src="https://maps.google.com/maps?q=Jl.+Urip+Sumoharjo+Tanggul+Jember&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                className="w-full h-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
 
-          {/* Jam Operasional */}
+          {/* Jam Buka & Pemesanan */}
           <div className="space-y-4">
             <h4 className="font-heading font-bold text-sm text-white tracking-wider uppercase">
-              Store Hours
+              Jam Buka
             </h4>
             <div className="space-y-3 text-xs sm:text-sm text-[#FAF6EF]/75 font-body">
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-[#F9D02F] shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-white">Senin - Minggu</p>
-                  <p className="text-xs text-[#FAF6EF]/70">07:00 - 20:00 WIB</p>
+                  <p className="font-bold text-white">Setiap Hari</p>
+                  <p className="text-xs text-[#FAF6EF]/70">08.00 - 22.00 WIB</p>
                 </div>
               </div>
+
+              <div className="flex items-start gap-2.5 pt-1">
+                <Phone className="w-4 h-4 text-[#F9D02F] shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-white">Layanan Pesanan / WA</p>
+                  <a
+                    href="https://wa.me/6281336664010"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#F9D02F] transition-colors font-semibold"
+                  >
+                    +62 813-3666-4010
+                  </a>
+                </div>
+              </div>
+
               <p className="text-xs text-[#FAF6EF]/60 leading-relaxed">
-                *Pre-order WhatsApp dapat dipesan kapan saja dan dikonfirmasi langsung oleh admin toko.
+                Melayani pesanan online dan offline setiap hari.
               </p>
             </div>
           </div>
 
-          {/* Kontak & Lokasi */}
+          {/* Media Sosial */}
           <div className="space-y-4">
             <h4 className="font-heading font-bold text-sm text-white tracking-wider uppercase">
-              Get in Touch
+              Sosial Media
             </h4>
             <div className="space-y-3 text-xs sm:text-sm text-[#FAF6EF]/75 font-body">
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#F9D02F] shrink-0 mt-0.5" />
-                <p>Jl. Melati No. 12, Jawa Timur, Indonesia</p>
-              </div>
-
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#F9D02F] shrink-0" />
-                <a
-                  href="https://wa.me/6281235742097"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#F9D02F] transition-colors font-semibold"
-                >
-                  +62 812-3574-2097
-                </a>
-              </div>
-
-              <div className="flex items-center gap-2.5">
+              <a
+                href="https://instagram.com/bakeryarini"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 hover:text-[#F9D02F] transition-colors"
+              >
                 <Instagram className="w-4 h-4 text-[#F9D02F] shrink-0" />
-                <span className="text-[#FAF6EF]/75">@arinibakery.id</span>
-              </div>
+                <span>Instagram: @bakeryarini</span>
+              </a>
+
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 hover:text-[#F9D02F] transition-colors"
+              >
+                <Facebook className="w-4 h-4 text-[#F9D02F] shrink-0" />
+                <span>Facebook: Arini Bakery</span>
+              </a>
+
+              <a
+                href="https://shopee.co.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 hover:text-[#F9D02F] transition-colors"
+              >
+                <ShoppingBag className="w-4 h-4 text-[#F9D02F] shrink-0" />
+                <span>Shopee: Arini Bakery</span>
+              </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Credits */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs text-[#FAF6EF]/50 font-body">
-          <p>© {new Date().getFullYear()} ARINI&apos;S®. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Arini Bakery. Hak Cipta Dilindungi.</p>
           <p className="flex items-center justify-center gap-1">
-            Baked with <Heart className="w-3.5 h-3.5 text-rose-400 fill-rose-400 inline" /> for snack lovers.
+            Dibuat dengan <Heart className="w-3.5 h-3.5 text-rose-400 fill-rose-400 inline" /> untuk pecinta roti & kue.
           </p>
         </div>
       </div>

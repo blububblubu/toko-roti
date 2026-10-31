@@ -3,9 +3,9 @@ import "./compiled.css";
 import { CartProvider } from "@/context/CartContext";
 
 export const metadata: Metadata = {
-  title: "Arini Bakery | Lezat, Hangat, & Berkualitas",
+  title: "Arini Bakery - Enak e gak mari-mari!",
   description:
-    "Landing page & sistem pre-order WhatsApp resmi Arini Bakery. Roti dan kue fresh setiap hari dengan bahan pilihan terbaik.",
+    "Toko roti lokal legendaris Jember. Menyajikan aneka roti, kue, dan brownies fresh setiap hari dengan cita rasa istimewa. Cocok untuk camilan keluarga hingga pesanan hajatan.",
 };
 
 export default function RootLayout({

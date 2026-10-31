@@ -191,13 +191,12 @@ export default function TestimoniPage() {
                 <ArrowRight className="w-4 h-4 text-accent-orange" />
               </Link>
               <a
-                href="https://wa.me/6281235742097?text=Halo%20Arini%20Bakery,%20saya%20tertarik%20untuk%20pesan%20roti"
+                href="https://wa.me/6281336664010?text=Halo%20Arini%20Bakery,%20saya%20tertarik%20untuk%20pesan%20roti"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-white border border-[#3E2723]/15 text-text-main font-heading font-bold text-sm hover:bg-white/80 transition-colors shadow-xs"
               >
                 <span>Chat Admin WhatsApp</span>
-                <span>💬</span>
               </a>
             </div>
           </div>

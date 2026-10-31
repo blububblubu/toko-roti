@@ -4,6 +4,7 @@ import TrustBadges from "@/components/TrustBadges";
 import ProductGrid from "@/components/ProductGrid";
 import IngredientsSection from "@/components/IngredientsSection";
 import PromoBanner from "@/components/PromoBanner";
+import HajatanSection from "@/components/HajatanSection";
 import CartDrawer from "@/components/CartDrawer";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <ProductGrid />
         <IngredientsSection />
         <PromoBanner />
+        <HajatanSection />
       </main>
       <Footer />
       <CartDrawer />

@@ -51,16 +51,16 @@ export default function ProductCard({ product }: ProductCardProps) {
             sizes="(max-width: 640px) 160px, 200px"
           />
         </div>
-
-        {/* Playful Floating Crumb / Sparkle */}
-        <div className="absolute bottom-2 right-4 text-sm opacity-80 pointer-events-none">
-          ✨
-        </div>
       </div>
 
       {/* Bottom Section - Crisp White Container (Happies Style) */}
       <div className="bg-white p-4 sm:p-5 rounded-b-[2rem] flex flex-col justify-between gap-3">
         <div>
+          {product.category && (
+            <span className="text-[10px] font-heading font-bold text-[#231F20]/50 uppercase tracking-wider block mb-0.5">
+              {product.category}
+            </span>
+          )}
           <h3 className="font-heading font-bold text-sm sm:text-base text-[#231F20] leading-tight">
             {product.name}
           </h3>

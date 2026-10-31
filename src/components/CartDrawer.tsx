@@ -71,8 +71,8 @@ export default function CartDrawer() {
             ) : cartItems.length === 0 ? (
               /* Empty Cart State */
               <div className="h-full flex flex-col items-center justify-center text-center py-12 space-y-4">
-                <div className="w-20 h-20 rounded-3xl bg-[#FDE68A]/60 flex items-center justify-center text-3xl shadow-inner">
-                  🥐
+                <div className="w-20 h-20 rounded-3xl bg-[#FDE68A]/60 flex items-center justify-center shadow-inner">
+                  <ShoppingBag className="w-9 h-9 text-[#231F20]/50" />
                 </div>
                 <div>
                   <h3 className="font-heading font-bold text-lg text-text-main">
