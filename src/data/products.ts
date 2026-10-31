@@ -1,60 +1,102 @@
 export type Product = {
   id: number;
   name: string;
-  category: string;
   price: number;
-  image: string;
+  category: string;
   badge?: string;
-  description?: string;
+  description: string;
+  image: string;
+  color?: string;
   rating?: number;
-  color: string; // Pastel background color for card
-  textColor?: string;
-  crumbs?: string;
 };
 
 export const products: Product[] = [
   {
     id: 1,
-    name: "Pisang Cokelat",
-    category: "Fresh Bakery",
-    price: 8000,
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop",
+    name: "Fudgy Brownies",
+    price: 35000,
+    category: "Cakes & Brownies",
     badge: "Best Seller",
-    description: "Roti lembut dengan isian pisang raja manis dan lelehan cokelat premium.",
-    rating: 4.9,
-    color: "#FCD34D", // Warm golden yellow
+    description: "Brownies panggang dengan tekstur fudgy legit dan rasa cokelat pekat.",
+    image: "/jajan/j1.jpg",
+    color: "#FCD34D",
+    rating: 5.0,
   },
   {
     id: 2,
-    name: "Fudgy Brownies",
-    category: "Cakes & Brownies",
-    price: 35000,
-    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800&auto=format&fit=crop",
+    name: "Pisang Cokelat",
+    price: 8000,
+    category: "Fresh Bakery",
     badge: "Best Seller",
-    description: "Brownies panggang dengan shiny crust renyah dan tekstur fudgy cokelat legit.",
-    rating: 5.0,
-    color: "#F4978E", // Pastel coral / warm peach
+    description: "Perpaduan pisang manis pilihan dan lelehan cokelat lumer berbalut roti lembut.",
+    image: "/jajan/j2.jpg",
+    color: "#F4978E",
+    rating: 4.9,
   },
   {
     id: 3,
     name: "Nastar Premium",
-    category: "Kue Kering",
     price: 45000,
-    image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=800&auto=format&fit=crop",
+    category: "Kue Kering",
     badge: "Oleh-oleh",
-    description: "Kue nastar renyah lumer dengan selai nanas madu asli yang harum butter.",
+    description: "Kue kering nanas legit dengan aroma butter gurih yang renyah dan lumer di mulut.",
+    image: "/jajan/j3.jpg",
+    color: "#A7D79A",
     rating: 4.9,
-    color: "#A7D79A", // Fresh pastel green
   },
   {
     id: 4,
-    name: "Paket Hajatan Box",
-    category: "Paket Rame",
-    price: 150000,
-    image: "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=800&auto=format&fit=crop",
-    badge: "Pesanan Massal",
-    description: "Kombinasi aneka roti & kue lezat kemasan higienis, hemat untuk acara besar.",
+    name: "Bolu Gulung Pandan",
+    price: 30000,
+    category: "Cakes & Brownies",
+    badge: "Favorit",
+    description: "Bolu gulung aroma pandan alami dengan isian krim manis lembut yang menggugah selera.",
+    image: "/jajan/j4.jpg",
+    color: "#8ECAE6",
+    rating: 4.8,
+  },
+  {
+    id: 5,
+    name: "Croissant Mentega",
+    price: 18000,
+    category: "Pastry",
+    badge: "Fresh",
+    description: "Pastry renyah berlapis dengan aroma butter berkualitas tinggi khas Prancis.",
+    image: "/jajan/j5.jpg",
+    color: "#FDE68A",
+    rating: 4.9,
+  },
+  {
+    id: 6,
+    name: "Donat Gula Salju",
+    price: 6000,
+    category: "Fresh Bakery",
+    badge: "Camilan",
+    description: "Donat empuk bertabur gula salju halus yang memberikan sensasi manis pas.",
+    image: "/jajan/j6.jpg",
+    color: "#FBCFE8",
+    rating: 4.8,
+  },
+  {
+    id: 7,
+    name: "Roti Sobek Manis",
+    price: 16000,
+    category: "Fresh Bakery",
+    badge: "Keluarga",
+    description: "Roti sobek porsi keluarga dengan tekstur super lembut dan aroma harum mentega.",
+    image: "/jajan/j7.jpg",
+    color: "#FED7AA",
     rating: 5.0,
-    color: "#8ECAE6", // Pastel sky blue
+  },
+  {
+    id: 8,
+    name: "Paket Hajatan Box",
+    price: 48000,
+    category: "Paket Rame",
+    badge: "Pesanan Massal",
+    description: "Kombinasi aneka roti dan kue kemasan praktis dan higienis untuk berbagai acara.",
+    image: "/jajan/j8.jpg",
+    color: "#BAE6FD",
+    rating: 5.0,
   },
 ];

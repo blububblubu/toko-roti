@@ -25,7 +25,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div
       className="rounded-[2rem] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group border border-black/5"
-      style={{ backgroundColor: product.color }}
+      style={{ backgroundColor: product.color || "#FDE68A" }}
     >
       {/* Top Section with Pastel Background */}
       <div className="p-4 sm:p-5 flex flex-col items-center relative">

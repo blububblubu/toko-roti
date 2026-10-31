@@ -1,10 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { products } from "@/data/products";
 import ProductCard from "./ProductCard";
-import { ArrowRight } from "lucide-react";
 
 export default function ProductGrid() {
+  const featuredProducts = products.slice(0, 4);
+
   return (
     <section id="products" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
       {/* Big Yellow Card Container - Happies Style */}
@@ -20,20 +22,17 @@ export default function ProductGrid() {
             </h2>
           </div>
 
-          <a
-            href="https://wa.me/6281235742097?text=Halo%20Arini%20Bakery,%20saya%20ingin%20melihat%20katalog%20lengkap"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/galeri"
             className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-heading font-semibold text-[#231F20] hover:translate-x-1 transition-all"
           >
-            <span>View all</span>
-            <ArrowRight className="w-4 h-4 stroke-[2]" />
-          </a>
+            <span>View All →</span>
+          </Link>
         </div>
 
         {/* 4 Cards Responsive Grid with distinct pastel backgrounds */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-          {products.map((product) => (
+          {featuredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
