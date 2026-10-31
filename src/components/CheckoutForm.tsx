@@ -123,7 +123,7 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
       .join("\n");
 
     // WhatsApp Direct Link
-    const waUrl = `https://wa.me/6281235742097?text=${encodeURIComponent(message)}`;
+    const waUrl = `https://wa.me/6281336664010?text=${encodeURIComponent(message)}`;
 
     // Buka WhatsApp di tab baru
     window.open(waUrl, "_blank", "noopener,noreferrer");
