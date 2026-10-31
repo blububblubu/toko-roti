@@ -13,13 +13,14 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.0",
-    "lucide-react": "0.294.0",
+    "lucide-react": "^0.475.0",
     "next": "16.4.3",
     "postcss": "^8.4.38",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
