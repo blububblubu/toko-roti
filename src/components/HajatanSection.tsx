@@ -2,9 +2,9 @@ import { MessageCircle, CheckCircle2 } from "lucide-react";
 
 export default function HajatanSection() {
   return (
-    <section id="hajatan" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-6">
+    <section id="hajatan" className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-8 mb-6">
       {/* Warm Yellow Card Container */}
-      <div className="bg-[#FDE68A] rounded-[2rem] sm:rounded-[2.5rem] p-8 sm:p-12 lg:p-14 relative overflow-hidden border border-black/5 shadow-xs">
+      <div className="bg-[#FDE68A] rounded-2xl sm:rounded-[2rem] md:rounded-[2.5rem] p-5 sm:p-10 lg:p-14 relative overflow-hidden border border-black/5 shadow-xs">
         <div className="grid lg:grid-cols-12 gap-8 items-center">
           {/* Content Column */}
           <div className="lg:col-span-8 space-y-4">

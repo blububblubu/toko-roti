@@ -3,9 +3,9 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="about" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-10">
+    <section id="about" className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-2 pb-6 sm:pb-10">
       {/* Giant Rounded Yellow Container - Happies Style */}
-      <div className="relative bg-[#F9D02F] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden p-6 sm:p-12 lg:p-16">
+      <div className="relative bg-[#F9D02F] rounded-2xl sm:rounded-[2rem] md:rounded-[2.5rem] overflow-hidden p-5 sm:p-10 lg:p-16">
         <div className="grid lg:grid-cols-12 gap-8 items-center">
           {/* Left Column: Typography & Button */}
           <div className="lg:col-span-7 space-y-4 sm:space-y-6 z-10">
@@ -59,8 +59,8 @@ export default function Hero() {
                 style={{ position: "relative", minHeight: "288px" }}
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop"
-                  alt="Pisang Cokelat Arini Bakery"
+                  src="/jajan/bolen.jpg"
+                  alt="Bolen Arini Bakery"
                   fill
                   className="object-cover"
                   priority
@@ -74,7 +74,7 @@ export default function Hero() {
                       Favorit Pelanggan
                     </span>
                     <span className="text-sm font-heading font-bold text-[#231F20]">
-                      Pisang Cokelat
+                      Bolen
                     </span>
                   </div>
                   <span className="px-3 py-1 rounded-full bg-[#F9D02F] text-[11px] font-heading font-bold text-[#231F20]">

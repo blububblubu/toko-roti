@@ -18,7 +18,7 @@ export default function VideoSection() {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <section className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-8">
       <div className="space-y-6">
         <div>
           <span className="text-[11px] font-bold tracking-[0.2em] text-[#231F20]/75 uppercase">
